@@ -1,6 +1,6 @@
-1. Create a new instance of the AdjMatrix_No2 class, passing the number of vertices as a parameter.
+1. Create a new instance of the AdjMatrix_No1a class, passing the number of vertices as a parameter.
 2. Use the addEdge method to add edges between vertices, specifying the vertices and the weight of the edge.
-3. Call the dfs method on the AdjMatrix_No2 object, passing the start and end vertices as parameters.
+3. Call the dfs method on the AdjMatrix_No1a object, passing the start and end vertices as parameters.
     - The dfs method initializes an array called visited to keep track of visited vertices. Set the start vertex as
       visited.
     - Create a new array called path to store the path from the start vertex to the current vertex. Initialize it with

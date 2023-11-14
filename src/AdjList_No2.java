@@ -1,11 +1,12 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-class AdjList_No1a {
+class AdjList_No2 {
     private final LinkedList<Integer>[] adj;
 
-    AdjList_No1a(int v) {
+    AdjList_No2(int v) {
         adj = new LinkedList[v];
         for (int i = 0; i < v; ++i)
             adj[i] = new LinkedList<>();
@@ -80,21 +81,45 @@ class AdjList_No1a {
 
 
     public static void main(String[] args) {
-        AdjList_No1a g = new AdjList_No1a(9);
-
-        g.addEdge(1, 2);
-        g.addEdge(2, 3);
-        g.addEdge(2, 4);
-        g.addEdge(2, 5);
-        g.addEdge(4, 5);
-        g.addEdge(4, 6);
-        g.addEdge(6, 7);
-        g.addEdge(6, 8);
-
+        AdjList_No2 g1 = new AdjList_No2(36);
+        g1.addEdge(1, 2);
+        g1.addEdge(2, 3);
+        g1.addEdge(3, 4);
+        g1.addEdge(4, 5);
+        g1.addEdge(5, 6);
+        g1.addEdge(5, 9);
+        g1.addEdge(6, 7);
+        g1.addEdge(7, 8);
+        g1.addEdge(9, 11);
+        g1.addEdge(9, 10);
+        g1.addEdge(10, 24);
+        g1.addEdge(10, 27);
+        g1.addEdge(12, 13);
+        g1.addEdge(13, 14);
+        g1.addEdge(14, 15);
+        g1.addEdge(15, 16);
+        g1.addEdge(16, 17);
+        g1.addEdge(17, 18);
+        g1.addEdge(18, 19);
+        g1.addEdge(19, 20);
+        g1.addEdge(20, 23);
+        g1.addEdge(21, 22);
+        g1.addEdge(22, 23);
+        g1.addEdge(22, 26);
+        g1.addEdge(24, 25);
+        g1.addEdge(25, 34);
+        g1.addEdge(25, 26);
+        g1.addEdge(26, 33);
+        g1.addEdge(27, 28);
+        g1.addEdge(28, 29);
+        g1.addEdge(29, 30);
+        g1.addEdge(31, 32);
+        g1.addEdge(32, 33);
+        g1.addEdge(34, 25);
         System.out.println("Following is Depth First Traversal " +
                 "(starting from vertex 1)");
 
-        Integer[] path = g.dfs(1, 6);
+        Integer[] path = g1.dfs(1, 21);
         for (Integer integer : path) {
             System.out.print(integer + " ");
         }
@@ -102,7 +127,7 @@ class AdjList_No1a {
         System.out.println("\nFollowing is Breadth First Traversal " +
                 "(starting from vertex 1)");
 
-        Integer[] path1 = g.bfs(1, 6).toArray(new Integer[0]);
+        Integer[] path1 = g1.bfs(1, 21).toArray(new Integer[0]);
         for (Integer integer : path1) {
             System.out.print(integer + " ");
         }

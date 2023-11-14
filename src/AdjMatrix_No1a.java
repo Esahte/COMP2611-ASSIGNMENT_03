@@ -1,10 +1,10 @@
 import java.util.Arrays;
 
-public class AdjMatrix_No2 {
+public class AdjMatrix_No1a {
     private final int[][] adj;
 
     // Constructor to initialize the adjacency matrix with V vertices
-    public AdjMatrix_No2(int V) {
+    public AdjMatrix_No1a(int V) {
         adj = new int[V][V];
     }
 
@@ -59,7 +59,7 @@ public class AdjMatrix_No2 {
         return null;
     }
 
-    // Create method that takes a path and calculates the weight of the path
+    // Create a method that takes a path and calculates the weight of the path
     public int pathWeight(Integer[] path) {
         int weight = 0;
         for (int i = 0; i < path.length - 1; i++) {
@@ -70,15 +70,16 @@ public class AdjMatrix_No2 {
 
     // Main method to test the code
     public static void main(String[] args) {
-        AdjMatrix_No2 g1 = new AdjMatrix_No2(9);
+        AdjMatrix_No1a g1 = new AdjMatrix_No1a(9);
         g1.addEdge(1, 2, 3);
         g1.addEdge(2, 3, 12);
-        g1.addEdge(2, 4, 2);
+        g1.addEdge(2, 4, 3);
         g1.addEdge(2, 5, 5);
         g1.addEdge(4, 5, 4);
         g1.addEdge(4, 6, 3);
-        g1.addEdge(6, 7, 8);
-        g1.addEdge(6, 8, 3);
+        g1.addEdge(6, 7, 3);
+        g1.addEdge(6, 8, 8);
+
         System.out.println(Arrays.toString(g1.dfs(1, 6)));
         System.out.println("Weight: " + g1.pathWeight(g1.dfs(1, 6)));
     }
